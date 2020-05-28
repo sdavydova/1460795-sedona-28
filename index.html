@@ -9,12 +9,12 @@
 <body>
   <header>
     <nav>
-      <a href="#">Информация</a>
-      <a href="#">Фото и видео</a>
-      <a href="#">Карта штата</a>
-      <a href="#">Гостиницы</a>
+      <a href="#" tabindex="1">Информация</a>
+      <a href="#" tabindex="2">Фото и видео</a>
+      <a href="#" tabindex="3">Карта штата</a>
+      <a href="#" tabindex="4">Гостиницы</a>
     </nav>
-    <img src="./img/svg-sedona/logo-sedona.svg" width="138px" height="70px">
+    <a href="#" tabindex="5"> <img src="./img/svg-sedona/logo-sedona.svg" width="138px" height="70px"></a>
   </header>
   <main>
     <section>
@@ -29,11 +29,11 @@
       <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
     </section>
     <section>
-      <h1><a href="#">Жилье</a></h1>
+      <h1><a href="#" tabindex="6">Жилье</a></h1>
       <p>Рекоммендуем пожить в натсоящем мотеле, всё как в кино!</p>
-      <h2><a href="#">Еда</a></h2>
+      <h2><a href="#" tabindex="7">Еда</a></h2>
       <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-      <h3><a href="#">Сувениры</a></h3>
+      <h3><a href="#" tabindex="8">Сувениры</a></h3>
       <p>Не только китайского, но и местного производства!</p>
     </section>
     <section>
@@ -58,11 +58,29 @@
         и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <div>
       </div>
-      <button>Поиск гостиницы в Седоне</button>
-      <span>Дата заезда</span>
-        <span>Дата выезда</span>
+      <button tabindex="9">Поиск гостиницы в Седоне</button>
       </div>
-      <div>Карта</div>
+      <div style="width: 100%; height: 300px; background-color: red; position: relative;">Карта
+        <form action="#" method="get" style="width: 300px; height: 300px; left: 50%; transform: translateX(-50%); background-color: green; top: -100px; z-index: 5; position: absolute;">
+          <fieldset>
+            <label for="checkin">Дата заезда</label>
+            <input type="date" id="checkin" name="checkin" tabindex="10">
+          </fieldset>
+          <fieldset>
+            <label for="checkout">Дата выезда</label>
+            <input type="date" id="checkout" name="checkout" tabindex="11">
+          </fieldset>
+          <fieldset>
+            <label for="adult">Взрослые</label>
+            <input type="number" min="1" max="5" step="1" id="adult" name="adult" tabindex="12">
+          </fieldset>
+          <fieldset>
+            <label for="children">Дети</label>
+            <input type="number" min="1" max="5" step="1" id="children" name="children" tabindex="13">
+          </fieldset>
+          <input type="submit" value="Найти" tabindex="14">
+        </form>
+      </div>
     </section>
   </main>
   <footer>
@@ -71,11 +89,11 @@
       тел.:+7 (495) 666-01-66
     </p>
     <p>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
-      <a href="#">Youtube</a>
+      <a href="#" tabindex="15">Twitter</a>
+      <a href="#" tabindex="16">Facebook</a>
+      <a href="#" tabindex="17">Youtube</a>
     </p>
-    <a href="#">Website by html academy</a>
+    <a href="#" tabindex="18">Website by html academy</a>
   </footer>
 </body>
 

@@ -9,34 +9,44 @@
 <body>
   <header>
     <nav>
-      <a href="blank.html">Информация</a>
-      <a href="blank.html">Фото и видео</a>
-      <a href="blank.html">Карта штата</a>
-      <a href="blank.html">Гостиницы</a>
+      <a href="blank.html" tabindex="1">Информация</a>
+      <a href="blank.html" tabindex="2">Фото и видео</a>
+      <a href="blank.html" tabindex="3">Карта штата</a>
+      <a href="blank.html" tabindex="4">Гостиницы</a>
     </nav>
-    <img src="./img/svg-sedona/logo-sedona.svg" width="138px" height="70px">
+    <a href="file:///Users/spenyaevagmail.com/Desktop/%D0%A4/HTML/1460795-sedona-28/index.html" tabindex="5">
+      <img src="./img/svg-sedona/logo-sedona.svg" width="138px" height="70px">
+    </a>
   </header>
   <main>
     <section>
-      <form>
+      <form action="#" method="post" oninput="priceoutput.value=price.value">
         <fieldset>
           <legend>Инфраструктура</legend>
-          <label>Бассейн</label>
-          <label>Парковка</label>
-          <label>WI-FI</label>
+          <input type="checkbox" id="pool" name="pool" tabindex="6">
+          <label for="pool">Бассейн</label>
+          <input type="checkbox" id="parking" name="parking" tabindex="7">
+          <label for="parking">Парковка</label>
+          <input type="checkbox" id="WI-FI" name="WI-FI" tabindex="8">
+          <label for="WI-FI">WI-FI</label>
         </fieldset>
         <fieldset>
           <legend>Тип жилья</legend>
-          <label>Гостиница</label>
-          <label>Мотель</label>
-          <label>Апартаменты</label>
+          <input type="checkbox" name="hotel" id="hotel" tabindex="9">
+          <label for="hotel">Гостиница</label>
+          <input type="checkbox" name="motel" id="motel" tabindex="10">
+          <label for="motel">Мотель</label>
+          <input type="checkbox" name="apartments" id="apartments" tabindex="11">
+          <label for="apartments">Апартаменты</label>
         </fieldset>
         <div>Стоимость в сутки (Р)</div>
         <div>
-          <label>от<input type="text" name="min-price" value="0"></label>
-          <label>до<input type="text" name="max-price" value="3000"></label>
+          <label for="price">от</label>
+          <label for="price">до</label>
+          0<input name="price" id="price" type="range" min="0" max="3000" step="1" tabindex="12">
+          <output name="priceoutput"></output>
+          <input type="submit" value="Показать" tabindex="13">
         </div>
-        <button>показать</button>
       </form>
     </section>
     <section>
@@ -44,13 +54,13 @@
       <ul>
         <li>Сортировка:</li>
         <li>
-          <a href="#" по цене</a>
+          <a href="#" tabindex="14"> по цене </a>
         </li>
         <li>
-          <a href="#" по типу</a>
+          <a href="#" tabindex="15"> по типу</a>
         </li>
         <li>
-          <a href="#" по рейтингу</a>
+          <a href="#" tabindex="16"> по рейтингу</a>
         </li>
       </ul>
     </section>
@@ -91,7 +101,7 @@
         <a href="blank.html">Facebook</a>
         <a href="blank.html">Youtube</a>
       </p>
-      <a href="">Website by html academy</a>
+      <a href="#">Website by html academy</a>
     </footer>
     </section>
   </main>
