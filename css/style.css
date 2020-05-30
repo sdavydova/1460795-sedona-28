@@ -1,0 +1,89 @@
+
+:root {
+  --base_color: #000000;
+  --reason_color: #333333;
+  --main_reason:#FFFFFF;
+  --rating: #666666;
+}
+
+body {
+  min-width: 1280px;
+  font-family: "PTSans";
+  background-color: white;
+}
+
+a {
+ text-decoration: none;
+ color: black;
+}
+
+
+nav a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.main_nav_backdrop {
+background-image: url("../img/backdrop_sedona.png");
+width: 1200px;
+height: 509px;
+
+}
+.title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.invitation_title {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--reason_color);
+
+}
+.main_reason {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--main_reason);
+}
+.mnrn_block p {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--main_reason);
+}
+.mnrn_block_backdrop {
+background-image: url("../img/mnrn_backdrop.png");
+width: 400px;
+height: 256px;
+}
+
+.advice_2 .name_of_reason {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--base_color)
+}
+.advice_1 p {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--reason_color);
+}
+.advice_2 p {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--reason_color);
+}
+.advice_2 h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--base_color);
+}
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+  color:var(--rating);
+
+}
