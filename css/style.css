@@ -1,89 +1,413 @@
-
 :root {
   --base_color: #000000;
   --reason_color: #333333;
-  --main_reason:#FFFFFF;
+  --main_reason: #ffffff;
   --rating: #666666;
+  --brown: #766357;
+  --brown_hover:#604e43;
+  --brown_active: #503e33;
+  --blue: #81B3D2;
+  --blue_active: #94b9d2;
+  --blue_hover:#5496bd;
+  --rate_text_background: #f2f2f2;
+
+
 }
 
-body {
+.page_body {
   min-width: 1280px;
-  font-family: "PTSans";
+  font-family: "PTSans", Arial;
   background-color: white;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-image: url("../img/backdrop1.jpg");
+  background-color: var(--main_reason);
+  background-position: top center;
+  background-repeat: repeat;
 }
 
 a {
- text-decoration: none;
- color: black;
+  text-decoration: none;
+  color: var(--base_color);
 }
 
-
-nav a {
+.navigation a {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+  text-align: center;
+  background-color: var(--main_reason);
+  min-height: 509px;
 }
 
-.main_nav_backdrop {
-background-image: url("../img/backdrop_sedona.png");
-width: 1200px;
-height: 509px;
-
+.navigation a:hover {
+  color: var(--blue);;
+  cursor: pointer;
 }
+
+.reason_housing p:hover {
+  color: var(--blue);;
+  cursor: pointer;
+}
+
+.reason_food p:hover {
+  color: var(--blue);;
+  cursor: pointer;
+}
+
+.reason_souvenirs p:hover {
+  color: var(--blue);;
+  cursor: pointer;
+}
+
+.header_index {
+  background-image: url("../img/backdrop_index.png");
+  width: 1200px;
+  height: 509px;
+}
+
 .title {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
 }
 
 .invitation_title {
   font-size: 14px;
   line-height: 26px;
   color: var(--reason_color);
+  text-align: center;
+}
 
-}
-.main_reason {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  color: var(--main_reason);
-}
-.mnrn_block p {
+.reason-text {
   font-size: 14px;
   line-height: 21px;
   color: var(--main_reason);
 }
-.mnrn_block_backdrop {
-background-image: url("../img/mnrn_backdrop.png");
-width: 400px;
-height: 256px;
+
+.reason-blue {
+  width: 33.3%;
+  height: 256px;
+  background-color: var(--blue);;
+  color: var(--main_reason);
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
 }
 
-.advice_2 .name_of_reason {
-  font-weight: bold;
+/*
+.reason-picture {
+  background-color: red;
+}
+*/
+.reason_title {
   font-size: 21px;
   line-height: 21px;
-  color: var(--base_color)
+  text-align: center;
 }
-.advice_1 p {
+
+.main_reason_number {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 100;
+  color: var(--main_reason);
+}
+
+.main_reason_text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 100;
+  color: var(--main_reason);
+}
+
+.reason_text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 100;
+  color: var(--reason_color);
+}
+
+.reason {
+  width: 33.3%;
+  padding: 60px 0 60px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.reason_housing::before {
+  content: "";
+  display: block;
+  margin: 0 auto 30px;
+  width: 75px;
+  height: 72px;
+  background: url("../img/housing.png") no-repeat 0 0;
+}
+
+.reason_food::before {
+  content: "";
+  display: block;
+  margin: 0 auto 30px;
+  width: 75px;
+  height: 72px;
+  background: url("../img/meal.png") no-repeat 0 0;
+}
+
+.reason_souvenirs::before {
+  content: "";
+  display: block;
+  margin: 0 auto 30px;
+  width: 75px;
+  height: 76px;
+  background: url("../img/souvenirs.png") no-repeat 0 0;
+}
+
+.advice p {
   font-size: 14px;
   line-height: 21px;
   color: var(--reason_color);
+  text-align: center;
+  text-transform: uppercase;
 }
-.advice_2 p {
+
+.advice>span {
   font-size: 14px;
   line-height: 21px;
-  color: var(--reason_color);
+  text-align: center;
 }
-.advice_2 h1 {
+
+.question {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
+  text-align: center;
+}
+
+.button_search {
+  font: inherit;
+  text-align: center;
+  color: var(--main_reason);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--brown);
+  border: none;
+  padding: 30px 124px 30px 125px;
+}
+
+.button_search:hover {
+  background-color: var(--brown_hover);
+  cursor: pointer;
+}
+
+.button_search:active {
+  background-color: var(--brown_active);
+  color: var(--main_reason);
+}
+.button_search:focus {
+  background-color: var(--brown_active);
+  color: var(--main_reason);
+
+}
+.search_hotel_location {
+  font: inherit;
+  text-align: center;
+  color: var(--main_reason);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--blue);;
+  border: none;
+  padding: 16px 182px 16px 181px;
+}
+
+.search_hotel_location:hover {
+  background-color:var(--blue_hover);
+  cursor: pointer;
+}
+
+.search_hotel_location:focus {
+  background-color: var(--blue_active);
+  color: var(--blue_active);
+}
+
+.search-info {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  font-weight: 100;
+}
+
+.search_form_field {
+  position: relative;
+  left: 5px;
+  top: -10px;
+  background-color: var(--main_reason);
+  text-decoration-color: var(--base_color);
+}
+
+.logo_academy {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 100;
+}
+
+.footer {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.header_inner {
+  background-image: url("../img/background_filter.png");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 217px;
+}
+
+.filter_categories {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--main_reason);
+}
+
+.check {
+  font-weight: 100;
+  color: var(--main_reason);
+}
+
+.btn-transparent {
+  font: inherit;
+  font-weight: 100;
+  color: var(--main_reason);
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.sort {
+  padding-top: 3px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 100;
+}
+
+.sort_title {
+  font-size: 12px;
+  margin-right: 42px;
+}
+
+.sort_option_active {
+  color: var(--blue);;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort_option {
+  border-bottom: 1px dotted #000;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort_option:hover {
+  color: var(--blue);;
+  cursor: pointer;
+}
+
+.active_sort:active {
+  color: black;
+  border-bottom: 0;
+}
+
+fieldset>label {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--main_reason);
+}
+
+.hotels {
+  font-size: 14px;
+  line-height: 21px;
   color: var(--base_color);
 }
+
+.hotels .title {
+  font-size: 21px;
+  line-height: 26px;
+}
+
 .rating {
   font-size: 14px;
   line-height: 21px;
-  color:var(--rating);
+  color: var(--rating);
+  font-weight: 100;
+}
+.hotel-rate-text {
+  text-align: center;
+  background-color: var(--rate_text_background);
+  padding: 3px 13px;
+}
+.hotels .hotels_type {
+  color: var(--reason_color);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 100;
+}
 
+.hotels>a {
+  color: var(--main_reason);
+}
+
+.button_blue {
+  font: inherit;
+  color: var(--main_reason);
+  background: var(--blue);;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 3px 17px 3px 16px;
+}
+
+.button_blue:hover {
+  background-color:var(--blue_hover);
+  cursor: pointer;
+}
+
+.button_blue:active {
+  background-color: var(--blue_active);
+color: var(--blue_active);
+}
+.button_blue:focus {
+  background-color: var(--blue_active);
+  color: var(--blue_active);
+
+}
+
+.button_brown {
+  font: inherit;
+  color: var(--main_reason);
+  background: #766357;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 3px 17px 3px 16px;
+}
+
+.button_brown:hover {
+  background-color: var(--brown_hover);
+  cursor: pointer;
+}
+
+.button_brown:active {
+  background-color: var(--brown_active);
+  color: var(--main_reason);
+}
+.button_brown:focus {
+  background-color: var(--brown_active);
+  color: var(--main_reason);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
