@@ -4,14 +4,14 @@
   --main_reason: #ffffff;
   --rating: #666666;
   --brown: #766357;
-  --brown_hover:#604e43;
+  --brown_hover: #604e43;
   --brown_active: #503e33;
   --blue: #81B3D2;
   --blue_active: #94b9d2;
-  --blue_hover:#5496bd;
+  --blue_hover: #5496bd;
   --rate_text_background: #f2f2f2;
-
-
+  --background_for_advice_block_second: #EEEEEE;
+  --form_stroke_hover: #dddcdc
 }
 
 .page_body {
@@ -26,6 +26,27 @@
   background-repeat: repeat;
 }
 
+.main {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.page {
+  height: 100%;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.page_body {
+  min-height: 100%;
+}
+
+.header_index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
   color: var(--base_color);
@@ -36,34 +57,55 @@ a {
   font-size: 14px;
   line-height: 26px;
   text-align: center;
-  background-color: var(--main_reason);
-  min-height: 509px;
+  min-height: 56px;
+  width: 100%;
 }
 
 .navigation a:hover {
-  color: var(--blue);;
+  color: var(--blue);
+  ;
   cursor: pointer;
 }
 
-.reason_housing p:hover {
-  color: var(--blue);;
-  cursor: pointer;
-}
-
-.reason_food p:hover {
-  color: var(--blue);;
-  cursor: pointer;
-}
-
-.reason_souvenirs p:hover {
-  color: var(--blue);;
-  cursor: pointer;
+.navigation {
+  width: 100%;
+  display: flex;
+  margin-bottom: -25px;
+  align-items: center;
+  width: 1180px;
 }
 
 .header_index {
   background-image: url("../img/backdrop_index.png");
-  width: 1200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: inherit;
+  width: 100%;
   height: 509px;
+}
+
+.header_inner {
+  background-image: url("../img/background_filter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: inherit;
+  width: 100%;
+  height: 509px;
+}
+
+.reason_housing:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.reason_food:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.reason_souvenirs:hover {
+  color: var(--blue);
+  cursor: pointer;
 }
 
 .title {
@@ -71,13 +113,19 @@ a {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  margin: 42px 365px 16px 365px;
 }
 
 .invitation_title {
   font-size: 14px;
   line-height: 26px;
+  font-weight: 100;
   color: var(--reason_color);
   text-align: center;
+  padding-right: 100px;
+  margin: 16px 341px 51px 340px;
 }
 
 .reason-text {
@@ -86,10 +134,11 @@ a {
   color: var(--main_reason);
 }
 
-.reason-blue {
-  width: 33.3%;
+.reason_blue {
+  width: 400px;
   height: 256px;
-  background-color: var(--blue);;
+  background-color: var(--blue);
+  ;
   color: var(--main_reason);
   font-size: 14px;
   line-height: 18px;
@@ -97,15 +146,20 @@ a {
   margin: 0;
 }
 
-/*
-.reason-picture {
-  background-color: red;
-}
-*/
-.reason_title {
+.main_reason_title {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+  padding-top: 47px;
+  margin: 0px 139px 25px 139px;
+}
+
+.main_reason_block_first {
+  display: flex;
+}
+
+.main_reason_block_second {
+  display: flex;
 }
 
 .main_reason_number {
@@ -113,6 +167,18 @@ a {
   line-height: 21px;
   font-weight: 100;
   color: var(--main_reason);
+}
+
+.first_main_reason_picture {
+  background-image: url("../img/svg-sedona/mnrn1.png");
+  width: 799px;
+  height: 256px;
+}
+
+.second_main_reason_picture {
+  background-image: url("../img/svg-sedona/mnrn2.png");
+  width: 799px;
+  height: 256px;
 }
 
 .main_reason_text {
@@ -130,7 +196,6 @@ a {
 }
 
 .reason {
-  width: 33.3%;
   padding: 60px 0 60px;
   text-align: center;
   line-height: 20px;
@@ -163,6 +228,12 @@ a {
   background: url("../img/souvenirs.png") no-repeat 0 0;
 }
 
+.advice {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px;
+}
+
 .advice p {
   font-size: 14px;
   line-height: 21px;
@@ -177,6 +248,19 @@ a {
   text-align: center;
 }
 
+.advice_block_second {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 80px;
+  background-color: var(--background_for_advice_block_second);
+}
+
+.question_block {
+  text-align: center;
+  margin: 58px;
+  padding-right: 35px
+}
+
 .question {
   font-weight: bold;
   font-size: 30px;
@@ -184,15 +268,45 @@ a {
   text-align: center;
 }
 
+.form {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--base_color);
+  border: 0px;
+  border-color: transparent;
+  box-shadow: 0 1px 3px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.application_form {
+  width: 568px;
+  height: 395px;
+  margin: 0 auto;
+}
+
+.search_info {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  font-weight: 100;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
 .button_search {
-  font: inherit;
   text-align: center;
   color: var(--main_reason);
-  vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--brown);
   border: none;
+  width: 568px;
+  height: 86px;
   padding: 30px 124px 30px 125px;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .button_search:hover {
@@ -204,24 +318,27 @@ a {
   background-color: var(--brown_active);
   color: var(--main_reason);
 }
+
 .button_search:focus {
   background-color: var(--brown_active);
   color: var(--main_reason);
-
 }
+
 .search_hotel_location {
-  font: inherit;
   text-align: center;
   color: var(--main_reason);
-  vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--blue);;
+  background-color: var(--blue);
   border: none;
-  padding: 16px 182px 16px 181px;
+  font-size: 21px;
+  line-height: 26px;
+  width: 458px;
+  height: 58px;
+  margin: 54px 55px 55px 55px;
 }
 
 .search_hotel_location:hover {
-  background-color:var(--blue_hover);
+  background-color: var(--blue_hover);
   cursor: pointer;
 }
 
@@ -230,30 +347,81 @@ a {
   color: var(--blue_active);
 }
 
-.search-info {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  font-weight: 100;
+/*
+.search_form_label {
+  margin-left: 55px;
 }
-
+*/
 .search_form_field {
   position: relative;
   left: 5px;
-  top: -10px;
   background-color: var(--main_reason);
   text-decoration-color: var(--base_color);
+  width: 346px;
+  height: 38px;
+  background-color: var(--rate_text_background);
+}
+
+.search_form_field:hover {
+  background-color: var(--form_stroke_hover);
+  cursor: pointer;
+}
+
+.search_form_field:focus {
+  background-color: var(--form_stroke_hover);
+  color: var(--form_stroke_hover);
+}
+
+.form_number {
+  background-color: var(--rate_text_background);
+  width: 114px;
+  height: 38px;
+}
+
+.form_number:hover {
+  background-color: var(--form_stroke_hover);
+  cursor: pointer;
+}
+
+.form_number:focus {
+  background-color: var(--form_stroke_hover);
+  color: var(--form_stroke_hover);
+}
+
+.search_form_label_guest {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacts {
+  list-style: none;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  margin-top: 23px;
+  padding-left: 0;
+}
+
+.footer_social {
+  margin-top: 36px;
 }
 
 .logo_academy {
   font-size: 14px;
   line-height: 26px;
   font-weight: 100;
+  display: flex;
+  margin-top: 49px;
 }
 
-.footer {
-  font-size: 21px;
-  line-height: 26px;
+.logo_academy_img {
+  background-image: url("../img/svg-sedona/logo.png");
+  width: 115px;
+  height: 41px;
 }
 
 .header_inner {
@@ -297,7 +465,8 @@ a {
 }
 
 .sort_option_active {
-  color: var(--blue);;
+  color: var(--blue);
+  ;
   font-size: 12px;
   line-height: 18px;
 }
@@ -310,7 +479,7 @@ a {
 }
 
 .sort_option:hover {
-  color: var(--blue);;
+  color: var(--blue);
   cursor: pointer;
 }
 
@@ -319,10 +488,14 @@ a {
   border-bottom: 0;
 }
 
+fieldset {
+  border: none;
+}
+
 fieldset>label {
   font-size: 14px;
   line-height: 21px;
-  color: var(--main_reason);
+  color: var(--base_color);
 }
 
 .hotels {
@@ -342,11 +515,13 @@ fieldset>label {
   color: var(--rating);
   font-weight: 100;
 }
+
 .hotel-rate-text {
   text-align: center;
   background-color: var(--rate_text_background);
   padding: 3px 13px;
 }
+
 .hotels .hotels_type {
   color: var(--reason_color);
   font-size: 14px;
@@ -361,7 +536,8 @@ fieldset>label {
 .button_blue {
   font: inherit;
   color: var(--main_reason);
-  background: var(--blue);;
+  background: var(--blue);
+  ;
   cursor: pointer;
   font-size: 14px;
   line-height: 21px;
@@ -369,18 +545,18 @@ fieldset>label {
 }
 
 .button_blue:hover {
-  background-color:var(--blue_hover);
+  background-color: var(--blue_hover);
   cursor: pointer;
 }
 
 .button_blue:active {
   background-color: var(--blue_active);
-color: var(--blue_active);
+  color: var(--blue_active);
 }
+
 .button_blue:focus {
   background-color: var(--blue_active);
   color: var(--blue_active);
-
 }
 
 .button_brown {
@@ -402,6 +578,7 @@ color: var(--blue_active);
   background-color: var(--brown_active);
   color: var(--main_reason);
 }
+
 .button_brown:focus {
   background-color: var(--brown_active);
   color: var(--main_reason);
