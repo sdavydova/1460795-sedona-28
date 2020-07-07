@@ -7,21 +7,25 @@
   <link rel="stylesheet" type="text/css" href="./css/normalize.css">
   <link rel="stylesheet" type="text/css" href="./css/fonts.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script defer src="./js/script.js"></script>
 </head>
 
 <body class="page_body">
   <header>
+
     <nav class="navigation">
       <a href="#">Информация</a>
       <a href="#">Фото и видео</a>
-      <a href="#" class="logo"> <img src="./img/svg-sedona/logo-sedona.svg" width="138px" height="70px"></a>
+      <a href="#" class="logo"> <img src="./img/logo-sedona.svg" width="138px" height="70px"></a>
       <a href="#">Карта штата</a>
-      <a href="#">Гостиницы</a>
+      <a href="searchforhotels.html">Гостиницы</a>
     </nav>
-    <div class="header_index">
-    </div>
+   <div class="header_index">
+  </div>
+
   </header>
   <main>
+
     <section>
       <h1 class="title">Седона — небольшой годок в Аризоне,
         заслуживающий большего!</h1>
@@ -30,27 +34,27 @@
     <section class="main_reason_block_first">
       <div class="reason-text reason_blue">
         <h1 class="main_reason_title">Настоящий городок</h1>
-        <p class="main_reason_number">№1</p>
+        <p class="main_reason_number">- №1 -</p>
         <p class="main_reason_text">Седона - не аттракцион для туристов, там <br> течет своя жизнь</p>
       </div>
       <div class="first_main_reason_picture"> </div>
     </section>
     <section class="advice">
       <div class="reason_housing_wrapper">
-        <h1><a href="#" class="reason"></h1>
-        <p class="reason_housing">Жилье</p>
+        <a href="#" class="reason">
+          <h3 class="reason_housing">Жилье</h3>
         </a>
         <p class="reason_text">Рекоммендуем пожить в настоящем <br>мотеле,всё как в кино!</p>
       </div>
       <div class="reason_food_wrapper">
-        <h2><a href="#" class="reason"></h2>
-        <p class="reason_food">Еда</p>
+        <a href="#" class="reason">
+          <h3 class="reason_food">Еда</h3>
         </a>
         <p class="reason_text">Всегда заказывайте фирменный бургер, <br>вы не разочаруетесь!</p>
       </div>
-      <div>
-        <h3><a href="#" class="reason"></h3>
-        <p class="reason_souvenirs">Сувениры</p>
+      <div class="reason_souvenirs_wrapper">
+        <a href="#" class="reason">
+          <h3 class="reason_souvenirs">Сувениры</h3>
         </a>
         <p class="reason_text">Не только китайского, но и местного <br>производства!</p>
       </div>
@@ -58,7 +62,7 @@
     <section class="main_reason_block_second">
       <div class="reason-text reason_blue">
         <h1 class="main_reason_title">Там есть мост дьявола</h1>
-        <p class="main_reason_number"> №2</p>
+        <p class="main_reason_number">- №2 -</p>
         <p class="main_reason_text">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
       </div>
       <div class="second_main_reason_picture"></div>
@@ -66,21 +70,21 @@
     <section class="advice_block_second">
       <div class="reason">
         <h2>Небольшая площадь</h2>
-        <span class="reason_text">№3</span>
+        <span class="reason_text">- №3 -</span>
         <p class="reason_text">Все достопримечательности <br> находятся очень близко</p>
       </div>
       <div class="reason">
         <h2>Красивая дорога</h2>
-        <span class="reason_text">№4</span>
+        <span class="reason_text">- №4 -</span>
         <p class="reason_text">Ехать в Седону из Лас-Вегаса совсем <br> не скучно!</p>
       </div>
       <div class="reason">
         <h2>Мало туристов</h2>
-        <span class="reason_text">№5</span>
+        <span class="reason_text">- №5 -</span>
         <p class="reason_text">Большинство едет в Гранд Каньон <br> и толпится там</p>
       </div>
 
-      </div>
+
     </section>
     <section>
       <div class="question_block">
@@ -89,28 +93,42 @@
           и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </div>
       <div class="application_form">
-        <button class="button_search form">Поиск гостиницы в Седоне</button>
-          <form action="#" method="get" class="form">
-            <fieldset>
+        <button class="button_search">Поиск гостиницы в Седоне</button>
+        <form class="form" action="#" method="get" onsubmit="event.preventDefault(); checkOnValid();">
+          <fieldset>
+            <div class="fieldset">
               <label for="checkin" class="search_form_label">Дата заезда:</label>
-              <input class="search_form_field" type="date" id="checkin" name="date" placeholder="24 апреля 2017">
+              <input class="search_form_input field" type="text" id="checkin" name="date" placeholder="24 апреля 2017">
+              <button class="calendar" type="button"></button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="fieldset">
+              <label for="checkout" class="search_form_label">Дата выезда:</label>
+              <input class="search_form_input field" type="text" id="checkout" name="date" placeholder="4 июля 2017">
+              <button class="calendar" type="button"></button>
+            </div>
+          </fieldset>
+          <div class="search_form_label_guest">
+            <fieldset>
+              <div class="fieldset">
+                <label for="adult" class="search_form_label">Взрослые:</label>
+                <input type="number" min="1" max="5" step="1" id="adult" name="adult" class="form_number field">
+                <button class="button_minus" type="button"></button>
+                <button class="button_plus" type="button"></button>
+              </div>
             </fieldset>
             <fieldset>
-              <label for="checkout" class="search_form_label">Дата выезда:</label>
-              <input class="search_form_field" type="date" id="checkout" name="date" placeholder="4 июля 2017">
-            </fieldset>
-            <div class="search_form_label_guest">
-              <fieldset>
-                <label for="adult" class="search_form_label">Взрослые:</label>
-                <input type="number" min="1" max="5" step="1" id="adult" name="adult" class="form_number search_form_label">
-              </fieldset>
-              <fieldset>
-                <label for="children" class="search_form_label">Дети:</label>
-                <input type="number" min="1" max="5" step="1" id="children" name="children" class="form_number search_form_label">
-              </fieldset>
+              <div class="fieldset">
+              <label for="children" class="search_form_label">Дети:</label>
+              <input type="number" min="1" max="5" step="1" id="children" name="children" class="form_number field">
+              <button class="button_minus" type="button"></button>
+              <button class="button_plus" type="button"></button>
             </div>
-            <input class="application_form search_hotel_location" type="submit" value="Найти">
-          </form>
+            </fieldset>
+          </div>
+          <input class="search_hotel_location" type="submit" value="Найти">
+        </form>
 
       </div>
       <div class="map">
@@ -119,22 +137,26 @@
           width="1199px" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
+    </div>
   </main>
-  <footer class="footer">
+  <footer class="footer_index">
+
     <ul class="contacts">
       <li> #VISITSEDONA</li>
       <li>тел:+7 (495) 666-01-66</li>
     </ul>
     <div class="footer_social">
-      <a href="#"> <img src="./img/svg-sedona/twitter.png"></a>
-      <a href="#"> <img src="./img/svg-sedona/fb.png"></a>
-      <a href="#"> <img src="./img/svg-sedona/youtube.png"></a>
+      <a href="#" class="twitter"></a>
+      <a href="#" class="facebook"></a>
+      <a href="#" class="youtube"></a>
     </div>
     <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo_academy">
       Website by
       <div class="logo_academy_img"> </div>
     </a>
+
   </footer>
+
 </body>
 
 </html>
