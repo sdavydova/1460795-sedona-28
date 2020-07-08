@@ -19,6 +19,7 @@
 
 .page {
   height: 100%;
+  background-color: var(--rate_text_background);
   /*
   width: 1200px;
   margin: 0 auto;
@@ -36,12 +37,12 @@
   line-height: 21px;
   text-transform: uppercase;
   background-color: var(--main_reason);
+  box-shadow: 0 1px 3px #ccc;
 }
 
 .page_body {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -69,8 +70,21 @@ a {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  text-align: center;
   min-height: 56px;
+}
+
+.navigation_align_left {
+  text-align: left;
+  padding-left: 65px;
+}
+
+.navigation_align_right {
+  text-align: right;
+  padding-right: 50px;
+}
+
+.logo {
+  padding-left: 40px;
 }
 
 .navigation a:hover {
@@ -142,7 +156,7 @@ a {
 }
 
 .reason_blue {
-  width: 33%;
+  width: 34%;
   height: 256px;
   background-color: var(--blue);
   ;
@@ -157,16 +171,17 @@ a {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
-  padding-top: 47px;
-  margin: 0 140px 25px;
+  padding-top: 37px;
 }
 
 .main_reason_block_first {
   display: flex;
+  padding-top: 10px;
 }
 
 .main_reason_block_second {
   display: flex;
+  padding-top: 15px;
 }
 
 .main_reason_number {
@@ -174,17 +189,18 @@ a {
   line-height: 21px;
   font-weight: 100;
   color: var(--main_reason);
+  padding-top: 10px;
 }
 
 .first_main_reason_picture {
   background-image: url("../img/mnrn1.png");
-  width: 799px;
+  width: 800px;
   height: 256px;
 }
 
 .second_main_reason_picture {
   background-image: url("../img/mnrn2.png");
-  width: 799px;
+  width: 800px;
   height: 256px;
 }
 
@@ -193,13 +209,18 @@ a {
   line-height: 21px;
   font-weight: 100;
   color: var(--main_reason);
+  padding-top: 10px;
 }
 
 .reason {
   display: block;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+}
+
+.reason_title {
+  margin-top: -5px;
+  margin-left: 20px;
 }
 
 .reason_text {
@@ -208,6 +229,15 @@ a {
   font-weight: 100;
   color: var(--reason_color);
   text-align: center;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.reason_text_number {
+  text-align: center;
+  margin-left: 25px;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .reason_housing::before {
@@ -255,7 +285,8 @@ a {
 .advice {
   display: flex;
   justify-content: space-around;
-  margin: 100px 0;
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 
 .advice h3 {
@@ -275,12 +306,12 @@ a {
   display: flex;
   justify-content: space-around;
   background-color: var(--background_for_advice_block_second);
+  padding-bottom: 50px;
 }
 
 .question_block {
   text-align: center;
-  margin: 58px;
-  padding-right: 35px
+  margin: 50px 0;
 }
 
 .question {
@@ -303,7 +334,7 @@ a {
 }
 
 .map {
-  margin-top: -300px;
+  margin-top: -385px;
 }
 
 .application_form {
@@ -329,6 +360,7 @@ a {
   border: none;
   padding: 30px 10px;
   font-size: 21px;
+  text-transform: uppercase;
 }
 
 .button_search:hover {
@@ -362,6 +394,8 @@ a {
   margin: 0 auto;
   opacity: 1;
   backface-visibility: hidden;
+  margin-top: 32px;
+  margin-left: 15px;
 }
 
 .search_hotel_location:hover {
@@ -382,6 +416,8 @@ a {
 
 .search_form_input {
   padding: 10px;
+  margin-right: 55px;
+  margin-top: 5px;
   background-color: var(--rate_text_background);
   width: 340px;
   border: none;
@@ -407,7 +443,7 @@ a {
   padding: 0;
   border: none;
   cursor: pointer;
-  margin-left: -60px;
+  margin-left: -100px;
 }
 
 .calendar:hover {
@@ -424,6 +460,8 @@ a {
 
 .form_number {
   background-color: var(--rate_text_background);
+  height: 38px;
+  margin-right: 20px;
   width: 114px;
   height: 38px;
 }
@@ -447,7 +485,7 @@ a {
   padding: 0;
   border: none;
   cursor: pointer;
-  margin-left: -110px;
+  margin-left: -130px;
 }
 
 .button_minus:hover {
@@ -491,13 +529,14 @@ a {
 
 .search_form_label {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .footer_index {
   display: flex;
   justify-content: space-around;
   position: relative;
-  margin-top: -99px;
+  margin-top: -130px;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -506,17 +545,23 @@ a {
   justify-content: space-around;
 }
 
+.footer_inner {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--main_reason);
+}
+
 .contacts {
   list-style: none;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
   margin-top: 23px;
-  padding-left: 0;
 }
 
 .footer_social {
   margin-top: 36px;
+  margin-right: 25px;
 }
 
 .twitter {
@@ -604,7 +649,6 @@ a {
   height: 217px;
 }
 
-
 .filter_form {
   display: flex;
   justify-content: space-between;
@@ -623,21 +667,20 @@ a {
   font-size: 16px;
   line-height: 21px;
   color: var(--main_reason);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  margin-left: 5px;
 }
 
 .input_price {
-width: 315px;
-
-
+  width: 315px;
 }
+
 .check {
   font-weight: 100;
   color: var(--main_reason);
-  display: block;
   color: var(--main_reason);
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .checkbox {
@@ -658,6 +701,10 @@ width: 315px;
 
 .check:disabled {
   color: var(--disabled);
+}
+
+.infra {
+  display: grid;
 }
 
 .infra input:checked+.check::before {
@@ -684,7 +731,8 @@ width: 315px;
 }
 
 .housings_type {
-  margin-left: 70px;
+  margin-left: 100px;
+  display: grid;
 }
 
 .btn_transparent:hover {
@@ -736,7 +784,8 @@ width: 315px;
   width: 10px;
   height: 10px;
   background-repeat: no-repeat;
-  margin-left: 550px;
+  margin-left: 495px;
+  margin-top: 5px;
 }
 
 .arrows_sort_up:hover {
@@ -744,7 +793,8 @@ width: 315px;
   width: 10px;
   height: 10px;
   background-repeat: no-repeat;
-  margin-left: 570px;
+  margin-left: 495px;
+  margin-top: 5px;
 }
 
 .arrows_sort_up:active {
@@ -752,7 +802,8 @@ width: 315px;
   width: 10px;
   height: 10px;
   background-repeat: no-repeat;
-  margin-left: 570px;
+  margin-left: 495px;
+  margin-top: 5px;
 }
 
 .arrows_sort_up:focus {
@@ -766,6 +817,7 @@ width: 315px;
   height: 10px;
   background-repeat: no-repeat;
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .arrows_sort_down:hover {
@@ -774,6 +826,7 @@ width: 315px;
   height: 10px;
   background-repeat: no-repeat;
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .arrows_sort_down:active {
@@ -782,6 +835,7 @@ width: 315px;
   height: 10px;
   background-repeat: no-repeat;
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .arrows_sort_down:focus {
@@ -795,6 +849,9 @@ width: 315px;
 
 .catalogue_sort_list>h1 {
   margin-top: 30px;
+  padding-left: 75px;
+  font-size: 21px;
+  padding-bottom: 18px;
 }
 
 fieldset {
@@ -810,7 +867,8 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .hotels {
@@ -850,7 +908,7 @@ fieldset {
 
 .hotels_type {
   display: inline-block;
-  width: 140px;
+  width: 110px;
 }
 
 .hotel_rate_text {
@@ -908,6 +966,7 @@ section .hotel {
 
 .hotel_action {
   display: flex;
+  margin-left: -5px;
 }
 
 .hotel_action .hotel_rate_text {
@@ -924,7 +983,7 @@ section .hotel {
   height: 25px;
   text-align: center;
   margin-right: 6px;
-  padding: 5px 15px 0 15px;
+  padding-top: 5px;
 }
 
 .button_blue:hover {
