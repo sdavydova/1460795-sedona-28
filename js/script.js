@@ -1,3 +1,4 @@
+// INDEX.HTML
 const searchButton = document.querySelector(".button_search")
 const form = document.querySelector(".form")
 const search_hotel_location = form.querySelector(".search_hotel_location")
@@ -6,7 +7,7 @@ const form_number = form.querySelector(".form_number")
 const fields = form.querySelectorAll(".field")
 
 searchButton.addEventListener("click", () => {
-  form.style.visibility = "visible"
+  form.classList.remove("form_hidden")
 })
 
 function checkOnValid() {
@@ -21,7 +22,7 @@ function checkOnValid() {
   }
 
   if(isValid) {
-    form.style.visibility = "hidden"
+    form.classList.add("form_hidden")
   }
 
   return isValid

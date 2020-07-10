@@ -6,9 +6,10 @@
   <title>HTML Academy:Седона, поиск отелей</title>
   <link rel="stylesheet" type="text/css" href="./css/fonts.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script defer src="./js/catalog.js"></script>
 </head>
 
-<body class="page_body inner_page">
+<body class="page_body">
   <header>
     <nav class="navigation">
       <a href="#" class="navigation_align_left">Информация</a>
@@ -43,11 +44,20 @@
             <label class="check" for="apartments">Апартаменты</label>
           </fieldset>
         </div>
-        <div class="filter_categories">Стоимость в сутки (Р)
-          <label for="price">от</label>
-          <label for="price">до</label>
-          <input type="range" id-"price" name="price" min="0" max="3000" step="1" class="input_price">
-          <input class="btn_transparent" type="submit" value="Показать">
+        <div class="filter_range">
+          <div class="filter_range_title">Стоимость в сутки (р):</div>
+          <div class="price_controls">
+            <label class="min_price">от <input type="text" name="min_price" value="0"></label>
+            <label class="max_price">до <input type="text" name="max_price" value="3000"></label>
+          </div>
+          <div class="range_controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range_toggle range_toggle_min" draggable="false" ondragstart="return false;"></div>
+            <div class="range_toggle range_toggle_max" draggable="false" ondragstart="return false;"></div>
+          </div>
+          <button class="btn_transparent" type="submit">показать</button>
         </div>
       </form>
     </section>

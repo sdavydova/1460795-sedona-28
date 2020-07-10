@@ -37,7 +37,7 @@
   line-height: 21px;
   text-transform: uppercase;
   background-color: var(--main_reason);
-  box-shadow: 0 1px 3px #ccc;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .page_body {
@@ -327,16 +327,77 @@ a {
   color: var(--base_color);
   border: 0px;
   border-color: transparent;
-  box-shadow: 0 1px 13px rgba (0, 0, 0, .5);
   position: relative;
   background-color: var(--main_reason);
   padding: 40px;
+  animation: 0.5s fadeOut;
+  animation-fill-mode: forwards;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.form_hidden {
+  animation: 0.5s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: : 1;
+  }
+
+  20% {
+    opacity: 0.8
+  }
+
+  40% {
+    opacity: 0.6
+  }
+
+  60% {
+    opacity: 0.4
+  }
+
+  80% {
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: : 0;
+  }
+
+  20% {
+    opacity: 0.2
+  }
+
+  40% {
+    opacity: 0.4
+  }
+
+  60% {
+    opacity: 0.6
+  }
+
+  80% {
+    opacity: 0.8
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
 .map {
   margin-top: -385px;
 }
-
+iframe {
+  vertical-align: middle;
+}
 .application_form {
   width: 570px;
   margin: 0 auto;
@@ -537,7 +598,7 @@ a {
   justify-content: space-around;
   position: relative;
   margin-top: -130px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .footer {
@@ -664,6 +725,7 @@ a {
 }
 
 .filter_categories {
+  display: flex;
   font-size: 16px;
   line-height: 21px;
   color: var(--main_reason);
@@ -671,15 +733,145 @@ a {
   margin-left: 5px;
 }
 
-.input_price {
-  width: 315px;
+/*------ FILTER-CATALOGUE --------*/
+.filter_range {
+  width: 320px;
+  margin: 0 auto;
+  /* для демо */
+  margin-right: 70px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
+
+.filter_range_title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-range {
+  margin-top: 3px;
+  margin-right: 0px;
+}
+
+.price_controls input {
+  height: 22px;
+}
+
+.price_controls {
+  position: relative;
+  height: 32px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price_controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.max-price input {
+  margin-right: 15px;
+}
+
+.price_controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 32px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price_controls .min_price,
+.price_controls .max_price {
+  width: 90px;
+  padding-left: 60px;
+}
+
+.price_controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range_controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range_controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range_controls .bar {
+  width: 150px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range_toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range_toggle:hover {
+  background: #1c4f80;
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+}
+
+.range_toggle_min {
+  left: 0;
+}
+
+.range_toggle_max {
+  left: 150px;
+}
+
+.btn_transparent {
+  width: 137px;
+  height: 37px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 85px;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 
 .check {
   font-weight: 100;
   color: var(--main_reason);
   color: var(--main_reason);
   position: relative;
+  padding-left: 10px;
   margin-bottom: 22px;
 }
 
@@ -731,7 +923,7 @@ a {
 }
 
 .housings_type {
-  margin-left: 100px;
+  margin-left: 87px;
   display: grid;
 }
 
