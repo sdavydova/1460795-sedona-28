@@ -23,13 +23,13 @@
   </header>
   <main>
     <section class="filter">
-      <form class="filter_form" action="#" method="post" oninput="priceoutput" value="price">
+      <form class="filter_form" action="https://echo.htmlacademy.ru/" method="post" oninput="priceoutput" value="price">
         <div class="housing_params">
           <fieldset class="infra">
             <legend class="filter_categories">Инфраструктура</legend>
             <input type="checkbox" id="pool" name="pool" class="checkbox">
             <label class="check" for="pool">Бассейн</label>
-            <input type="checkbox" id="parking" name="parking" class="checkbox">
+            <input type="checkbox" id="parking" name="parking" checked disabled class="check_disabled checkbox">
             <label class="check" for="parking">Парковка</label>
             <input type="checkbox" id="WI-FI" name="WI-FI" class="checkbox">
             <label class="check" for="WI-FI">WI-FI</label>
@@ -63,14 +63,18 @@
     </section>
     <section>
       <div class="catalogue_sort_list">
-        <h1> Найдено: 3</h1>
+        <h2> Найдено: 3</h2>
         <div class="sort">
+          <div class="sort_categories">
           <div class="sort_title">Сортировка:</div>
           <a href="#" class="sort_option">по цене</a>
           <a href="#" class="sort_option">по типу</a>
           <a href="#" class="sort_option">по рейтингу</a>
+          </div>
+          <div class="sort_arrows">
           <a href="#" class="arrows_sort_up"></a>
           <a href="#" class="arrows_sort_down"></a>
+          </div>
         </div>
       </div>
     </section>
@@ -166,12 +170,12 @@
     <footer class="footer_inner">
       <ul class="contacts">
         <li> #VISITSEDONA</li>
-        <li><a href="tel:+74956660166">тел:+7 (495) 666-01-66</a></li>
+        <li><a href="tel:+74956660166">тел: +7 (495) 666-01-66</a></li>
       </ul>
       <div class="footer_social">
-        <a href="#" class="twitter"></a>
-        <a href="#" class="facebook"></a>
-        <a href="#" class="youtube"></a>
+        <a href="#" class=" visually_hidden twitter">Twitter</a>
+        <a href="#" class=" visually_hidden facebook">Facebook</a>
+        <a href="#" class=" visually_hidden youtube">Youtube</a>
       </div>
       <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo_academy">
         Website by
