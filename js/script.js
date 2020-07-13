@@ -19,11 +19,11 @@ function checkOnValid() {
     if (!fields[i].value) {
       isValid = false;
       console.log(fields[i]);
-      fields[i].style.border="1px solid red";
+      fields[i].style.border = "1px solid red";
     }
   }
 
-  if(isValid) {
+  if (isValid) {
     form.classList.add("form_hidden");
   }
 

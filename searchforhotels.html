@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy:Седона, поиск отелей</title>
   <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <script defer src="./js/catalog.js"></script>
 </head>
 
 <body class="page_body">
@@ -14,7 +14,7 @@
     <nav class="navigation">
       <a href="#" class="navigation_align_left">Информация</a>
       <a href="#" class="navigation_align_left">Фото и видео</a>
-      <a href="index.html" class="logo"> <img src="./img/logo-sedona.svg" width="138px" height="70px" alt="На главную"></a>
+      <a href="index.html" class="logo"> <img src="./img/logo_sedona.svg" width="138" height="70" alt="На главную"></a>
       <a href="#" class="navigation_align_right">Карта штата</a>
       <a href="#" class="navigation_align_right">Гостиницы</a>
     </nav>
@@ -23,24 +23,24 @@
   </header>
   <main>
     <section class="filter">
-      <form class="filter_form" action="https://echo.htmlacademy.ru/" method="post" oninput="priceoutput" value="price">
+      <form class="filter_form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="housing_params">
           <fieldset class="infra">
             <legend class="filter_categories">Инфраструктура</legend>
-            <input type="checkbox" id="pool" name="pool" class="checkbox">
+            <input class="checkbox" type="checkbox" id="pool" name="pool" >
             <label class="check" for="pool">Бассейн</label>
-            <input type="checkbox" id="parking" name="parking" checked disabled class="check_disabled checkbox">
+            <input class="check_disabled checkbox" type="checkbox" id="parking" name="parking" checked disabled  >
             <label class="check" for="parking">Парковка</label>
-            <input type="checkbox" id="WI-FI" name="WI-FI" class="checkbox">
+            <input class="checkbox" type="checkbox" id="WI-FI" name="WI-FI"  >
             <label class="check" for="WI-FI">WI-FI</label>
           </fieldset>
           <fieldset class="housings_type">
             <legend class="filter_categories">Тип жилья</legend>
-            <input type="checkbox" name="hotel" id="hotel" class="checkbox">
+            <input class="checkbox" type="checkbox" name="" id="hotel" >
             <label class="check" for="hotel">Гостиница</label>
-            <input type="checkbox" name="motel" id="motel" class="checkbox">
+            <input class="checkbox" type="checkbox" name="motel" id="motel" >
             <label class="check" for="motel">Мотель</label>
-            <input type="checkbox" name="apartments" id="apartments" class="checkbox">
+            <input class="checkbox" type="checkbox" name="apartments" id="apartments" >
             <label class="check" for="apartments">Апартаменты</label>
           </fieldset>
         </div>
@@ -66,21 +66,21 @@
         <h2> Найдено: 3</h2>
         <div class="sort">
           <div class="sort_categories">
-          <div class="sort_title">Сортировка:</div>
-          <a href="#" class="sort_option">по цене</a>
-          <a href="#" class="sort_option">по типу</a>
-          <a href="#" class="sort_option">по рейтингу</a>
+            <div class="sort_title">Сортировка:</div>
+            <a href="#" class="sort_option">по цене</a>
+            <a href="#" class="sort_option">по типу</a>
+            <a href="#" class="sort_option">по рейтингу</a>
           </div>
           <div class="sort_arrows">
-          <a href="#" class="arrows_sort_up"></a>
-          <a href="#" class="arrows_sort_down"></a>
+            <a href="#" class="arrows_sort_up"></a>
+            <a href="#" class="arrows_sort_down"></a>
           </div>
         </div>
       </div>
     </section>
     <section class="hotels">
       <div class="hotel">
-        <img class="hotel_img" src="./img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara resort & SPA  ">
+        <img class="hotel_img" src="./img/hotel_1.jpg" width="135" height="90" alt="Гостиница Amara resort & SPA  ">
         <div class="hotel_info">
           <h1><a href="#" class="title_hotel">Amara resort & SPA </a></h1>
           <div class="hotels_type_block">
@@ -112,7 +112,7 @@
     </section>
     <section class="hotels">
       <div class="hotel">
-        <img class="hotel_img" src="./img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+        <img class="hotel_img" src="./img/hotel_2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
         <div class="hotel_info">
           <h1><a href="#" class="title_hotel">Desert Quail Inn</a></h1>
           <div class="hotels_type_block">
@@ -141,7 +141,7 @@
     </section>
     <section class="hotels">
       <div class="hotel">
-        <img class="hotel_img" src="./img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas At Poco Diablo">
+        <img class="hotel_img" src="./img/hotel_3.jpg" width="135" height="90" alt="Апартаменты Villas At Poco Diablo">
         <div class="hotel_info">
           <h1><a href="#" class="title_hotel">Villas At Poco Diablo</a></h1>
           <div class="hotels_type_block">
@@ -166,22 +166,23 @@
         </div>
       </div>
     </section>
+  </main>
+  <footer class="footer_inner">
+    <ul class="contacts">
+      <li> #VISITSEDONA</li>
+      <li><a href="tel:+74956660166">тел: +7 (495) 666-01-66</a></li>
+    </ul>
+    <div class="footer_social">
+      <a href="#" class=" visually_hidden twitter">Twitter</a>
+      <a href="#" class=" visually_hidden facebook">Facebook</a>
+      <a href="#" class=" visually_hidden youtube">Youtube</a>
     </div>
-    <footer class="footer_inner">
-      <ul class="contacts">
-        <li> #VISITSEDONA</li>
-        <li><a href="tel:+74956660166">тел: +7 (495) 666-01-66</a></li>
-      </ul>
-      <div class="footer_social">
-        <a href="#" class=" visually_hidden twitter">Twitter</a>
-        <a href="#" class=" visually_hidden facebook">Facebook</a>
-        <a href="#" class=" visually_hidden youtube">Youtube</a>
-      </div>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo_academy">
-        Website by
-        <div class="logo_academy_img"> </div>
-      </a>
-    </footer>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo_academy">
+      Website by
+      <div class="logo_academy_img"> </div>
+    </a>
+  </footer>
+  <script defer src="./js/catalog.js"></script>
 </body>
 
 </html>

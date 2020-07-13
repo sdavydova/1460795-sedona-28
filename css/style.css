@@ -1,3 +1,26 @@
+.visually_hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: -1px;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/ptsans.woff2') format('woff2'),
+    url('../fonts/ptsans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/ptsansbold.woff2') format('woff2'),
+    url('../fonts/ptsansbold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --base_color: #000000;
   --reason_color: #333333;
@@ -16,12 +39,6 @@
   --map_background: #cbdda9;
   --range_toogle: #ababab;
   --range_toggle_hover: #1c4f80;
-}
-.visually_hidden {
-text-indent: 100%;
-white-space: nowrap;
-overflow: hidden;
-margin: -1px;
 }
 
 .page {
@@ -398,6 +415,7 @@ a {
 
 iframe {
   vertical-align: middle;
+  border: 0;
 }
 
 .application_form {
@@ -510,7 +528,6 @@ iframe {
   cursor: pointer;
   position: absolute;
   right: 18px;
-
 }
 
 .calendar:hover {
@@ -589,7 +606,6 @@ iframe {
   cursor: pointer;
   margin-left: 75px;
 }
-
 
 .button_plus:hover {
   background: url("../img/plus_hover.png");
@@ -757,6 +773,7 @@ iframe {
   color: var(--main_reason);
   margin-bottom: 15px;
   margin-left: 5px;
+  font-weight: bold;
 }
 
 /*------ FILTER-CATALOGUE --------*/
@@ -911,7 +928,7 @@ iframe {
   content: "";
   vertical-align: middle;
   display: inline-block;
-  background: url("../img/checkbox-off.png");
+  background: url("../img/checkbox_off.png");
   background-repeat: no-repeat;
   width: 27px;
   height: 23px;
@@ -922,17 +939,17 @@ iframe {
   display: grid;
 }
 
-.infra input::checked+.check::before {
+.infra input:checked + .check::before {
   background: url("../img/checkbox_on.png");
   background-repeat: no-repeat;
 }
 
-.housings_type input::checked+.check::before {
+.housings_type input:checked+.check::before {
   background: url("../img/checkbox_on.png");
   background-repeat: no-repeat;
 }
 
-.infra input::checked::disabled+.check::before {
+.infra input:checked:disabled+.check::before {
   content: "";
   background: url("../img/checkbox_disabled.png");
   background-repeat: no-repeat;
