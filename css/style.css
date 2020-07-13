@@ -668,6 +668,7 @@ iframe {
 
 .twitter {
   display: inline-block;
+  vertical-align: middle;
   background: url("../img/twitter.png");
   background-repeat: no-repeat;
   width: 46px;
@@ -684,6 +685,7 @@ iframe {
 
 .facebook {
   display: inline-block;
+  vertical-align: middle;
   background: url("../img/fb.png");
   background-repeat: no-repeat;
   width: 46px;
@@ -700,6 +702,7 @@ iframe {
 
 .youtube {
   display: inline-block;
+  vertical-align: middle;
   background: url("../img/youtube.png");
   background-repeat: no-repeat;
   width: 46px;
@@ -1146,6 +1149,7 @@ fieldset {
 
 .hotels_type {
   display: inline-block;
+  vertical-align: middle;
   width: 110px;
 }
 
